@@ -1,0 +1,456 @@
+:root
+{
+    /* --fav-color:rgb(10, 10, 58); */
+    --fav-color:#000;
+    --default-color:#000;
+    --undefault-color:#fff;
+}
+/* ? Start Global Classes */
+.countainer{width: 90%;margin: 0 auto};
+
+a{text-decoration: none !important;}
+.orangered{color: orangered;}
+.hidden{display: none;}
+.s-btn{height: 30px;width: 30px;background: #fff;display: flex;align-items: center;justify-content: center;border-radius: 50%;cursor: pointer;font-weight: bold;}
+.s-btn:hover{transition: .3s;background: orange;}
+.allvh{min-height: 100vh;}
+.active{background: orangered;box-shadow: inset 0 0 12px #000;}
+.text-center{text-align: center;}
+.flex{gap: .8rem;}
+.flex,
+.flex-center,
+.flex-between,
+.flex-around,
+.flex-evenly,
+.flex{display: flex;align-items: center;}
+
+.flex-center{justify-content: center;}
+.flex-between{justify-content: space-between;}
+.flex-around{justify-content: space-around;}
+.flex-evenly{justify-content: space-evenly;}
+.flex-column{display: flex;align-items: center;flex-direction: column;justify-content: center;}
+/* Start scroll to center */
+.scroller-x{scroll-snap-type: x mandatory;/*X || Y*/overflow: hidden;}
+.scroller-child{scroll-snap-align: center;}
+/* End scroll to center */
+.my-1{margin: 1rem auto;}
+.my--5{margin: .5rem auto;}
+/*! Start Styling the Scroll bars */
+.Videos--inner::-webkit-scrollbar,
+.casts--inner::-webkit-scrollbar{height: 4px;background: transparent;}
+::-webkit-scrollbar-thumb,
+.casts--inner::-webkit-scrollbar-thumb{height: 4px;background: orangered;border-radius: 20px;}
+
+body::-webkit-scrollbar,
+.Overview-desc::-webkit-scrollbar{width: 4px;background: transparent;}
+body::-webkit-scrollbar-thumb,
+.Overview-desc::-webkit-scrollbar-thumb{width: 4px;background: orangered;border-radius: 20px;}
+/*! End Styling the Scroll bars */
+
+/* ? End Global Classes */
+
+/* @media (min-width:400px){*,html,body{padding: 0;margin: 0;}} */
+*,html,body{padding: 0;margin: 0;color: #fff;}
+body.small-size{height:100vh;height:100dvh;overflow: hidden;}
+body.small-size form{display: none;}
+body
+{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   min-height: 100dvh;
+   background: var(--fav-color);
+   overflow-x: hidden;
+}
+/* ? Start Styling header */
+header
+{
+   position: relative;
+   height: 90vh;
+   height: 90dvh;
+}
+.headerCover
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index:-1;
+}
+.header--cover
+{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(to top,var(--fav-color),transparent);
+    z-index: -1;
+}
+nav{
+    height: 50px;
+    z-index: 10;
+}
+
+nav .logo a{text-decoration: none;color: #ffff;}
+nav .logo a:hover{color: blue;}
+ul.nav-list{gap: 1rem;}
+ul.nav-list li {list-style: none;}
+ul.nav-list li a {text-decoration: none;color:#fff;font-weight: 600;font-size: 17px;}
+ul.nav-list li a:hover {transition:.3s; color: orangered;}
+.navbar-btn{display: none;}
+/* => small screen nav bar*/
+@media (max-width:400px){
+    nav .logo,ul.nav-list{margin:0;} 
+}
+@media (max-width:385px){
+ul.nav-list li a {font-size: 13px;}
+}
+/* <= small screen nav bar*/
+.header-p-inner{display: none;}
+.header--inner
+{
+    height: 20rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+.header--inner h1
+{
+    font-style: italic;
+    font-size: 5rem;
+    color: #fff;
+}
+.header--inner p
+{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+form.searchField
+{
+   height: 2.3rem;
+   width: 90%;
+   border-radius: 30px;
+   border: solid 1px #000;
+   background: linear-gradient(to right,black 60%,orangered);
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+}
+form.searchField input
+{
+   position:absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 80%;
+   border: 0;
+   outline: 0;
+   padding: 0 20px;
+   color: var(--default-color);
+}
+form.searchField input:focus{color: yellow;background: #000;font-style: italic;}
+form.searchField label
+{
+   position:absolute;
+   top: .3rem;
+   right: 6%;
+   font-weight: 600;
+   cursor: pointer;
+}
+@media (max-width:600px){
+    .header--inner h1{font-size: 2.4rem;}
+    .header--inner p{font-size: 14px;}
+    ul.nav-list li {color: #ffff;}
+    .exitbtn
+    {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+/* ? End Styling header */
+
+
+/* ? Start Styling the Section body */
+.section{margin: 1rem 0;}
+/* Start styling the section inner */
+.section-carousel{
+    position: relative;
+}
+.section-header{margin: 1rem 0;}
+.sectionTitle{font-size: 1.7rem;}
+.time-zone
+{
+    background: #ffffffc0;
+    border-radius: 20px;
+    height: 1.9rem;
+}
+.time-zone .time
+{
+    border-radius: 20px;
+    padding: 6px 17px;
+    font-weight: 600;
+    color: #000;
+    transition: .4s;
+    cursor: pointer;
+}
+.time-zone .time:hover{background: orangered;box-shadow: inset 0 0 12px #000;}
+
+/* => Carousel inner*/
+.carousel--inner::-webkit-scrollbar{display: none;}
+.carousel--inner
+{
+    display: flex;
+    gap: .5rem;
+    overflow:scroll hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+/* ! --------------------------------------------------- Card Styling ------------------------------------------- */
+.Card
+{
+   height: 15rem;
+   width: 8rem;
+   position: relative;
+   margin-bottom: .4rem;
+   text-decoration: none;
+}
+.Card.CarouselCard{min-width: 8rem;}
+.Card img
+{
+    height: 80%;
+    width:100%;
+    border-radius: 10px;
+}
+.Card .Card--title{
+    --max-lines: 1;
+    font-weight: 500;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+    color: #fff;
+}
+.Card--rate
+{
+     height: 30px;
+     width: 30px;
+     border-radius: 50%;
+     background: rgb(255, 255, 0);
+     position: absolute;
+     left: 0;
+     bottom: 19%;
+     font-weight: bold;
+}
+.date{color: #ffffffa1;}
+/* <= Carousel inner*/
+/* => Carousel btns*/
+.carousel--btns
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    translate: 0 -50%;
+    width: 100%; 
+    height: 0;
+}
+/* ? End Styling the Section body */
+
+
+
+/*! Start Styling the Preview html page  */
+.PreviewCard--inner{
+    gap: .8rem;
+    margin: 4rem 0 6rem 0;
+}
+.CardCover{height: 27rem;width: 50%;max-width: 20rem;}
+.CardCover img
+{
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 12px -4px orange;
+}
+
+ .CardData{margin: 1rem 0;}
+ .Card--title{color: #fff;font-family: system-ui, sans-serif;margin: .5rem 0;}
+ .Genres-tags{gap: .4rem;}
+ .Genres-tags .genre-tag{color: #fff;padding: 8px 14px;border-radius: 18px;-webkit-user-select: none;-user-select: none;text-decoration:none;}
+ .wraper{margin: 1rem auto;}
+ .wraper a{font-style: italic;text-decoration: none;color: #fff;font-size: 20px;}
+ .wraper a:hover{transition:.3s;color: orange;}
+ .wraper span{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: orange;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Overview
+{
+    font-size: 19px;
+    margin: .5rem 0;
+}
+.Overview-desc{color: #fff;max-height: 300px;overflow:hidden scroll;white-space: wrap;}
+.Overview-desc{max-height: 200px;margin-bottom: 1rem;}
+@media (max-width:425px){
+    .Overview-desc{max-height: 170px;margin-bottom: 1rem;}
+}
+@media (max-width:375px){
+    .Overview-desc{max-height: 150px;margin-bottom: 1rem;}
+}
+@media (max-width:325px){
+  .Overview-desc{max-height: 145px;margin-bottom: 1rem;}
+}
+.Card--countainer{margin-bottom: 1rem;}
+/* Start styling the Catalog*/
+.Catalog span{text-align: center;}
+.Catalog hr{opacity: .7;}
+.Catalog .catalog--row a{color: blue;padding-right: .3rem;}
+.Property{color: orange;font-style: oblique;text-transform: capitalize;}
+.Casts--countainer{margin-top: 12rem;} 
+
+@media (max-width:982px){
+    .Casts--countainer{margin-top: 16rem;} 
+}
+@media (max-width:1024px)
+{
+    .Casts--countainer{margin: 8rem auto 1rem;} 
+    .CardCover{width: 70%;}
+}
+@media (max-width:768px)
+{
+    .Casts--countainer{margin: 10rem auto 1rem;} 
+    .CardCover{width: 100%;}
+}
+@media (max-width:425px){
+    .Casts--countainer{margin: 15rem auto 1rem;} 
+  .Catalog{display: none;}
+}
+/* End styling the Catalog*/
+
+
+
+@media (max-width:578px){
+    .PreviewCard--inner{flex-direction: column;}
+    header{margin-bottom: 2rem;}
+    .Genres-tags,
+    .wraper,
+    .PreviewCard--inner
+    {text-align: center;}
+    .CardCover
+    {
+        height: 15rem;
+        width: 100%;
+        text-align: center;
+    }
+    .CardCover img
+    {
+        height: 100%;
+        width: 10rem;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .CardData{margin: .3rem 0;}
+    .Card--title{font-size:16px;margin: .5rem 0;}
+    .Genres-tags{margin:  auto .3rem;}
+    .Genres-tags span{font-size: 13px;}
+    .wraper{width: 100%;margin:1rem auto 1rem .5rem;}
+    .wraper span{height: 26px;width: 26px;}
+    .wraper a{font-size: 14px;}
+  }
+@media (max-width:578px){.PreviewCard--inner{flex-direction: column;}}
+  /* Start Styling the Cast section */
+  
+  .casts--inner{margin: .4rem 0;overflow: scroll hidden;gap: .6rem;padding-bottom: 1rem;}
+  .Cast{text-align: center;}
+  .cast-profile
+  {
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .ActorName,.roleName{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    --max-lines: 1;
+    font-weight: 500;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+  }
+  .ActorName{color: #797676;}
+
+  /* End Styling the Cast section */
+
+  /* Satrt Styling the Videos Carousel*/
+  .VideosPlayer{position: relative;}
+  .Videos--inner
+  {
+    position: relative;
+    height: 30rem;
+    overflow:scroll hidden;
+    padding-bottom:1rem;
+    scroll-behavior: smooth;
+  }
+  .Video
+  {
+    height: 100%;
+    min-width: 100%;
+  }
+  .video--title{margin: 1rem 0 1rem .5rem;color:yellow;}  
+  .Video iframe{
+    height: 90%;
+    width: 100%;
+    box-shadow:0 0 8px orange;
+  }
+  /*End Styling the Videos Carousel*/
+
+  /* Start Styling the Similar section*/
+  .similar--inner
+  {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  /* End Styling the Similar section*/
+/*! End Styling the Preview html page  */
+
+
+
+
+
+
+
+/* ? Start Styling the footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    height: 400px;
+    text-align: center;
+    margin-top: 4rem;
+}
+.footer--links,
+.footer--socials{margin: 1rem 0;}
+.footer--links a{text-decoration: none;color: #fff;transition: .3s;}
+.footer--links a:hover{color: orange;}
+.footer--inner{max-width: 400px;color: #fff;}
+@media (max-width:400px){
+    .footer--links,
+    .footer--socials{font-size: 12px;}
+    .countainer{width: 100%;margin: 0;padding: 0;}
+}
+/* @media (max-width:370px){}; */
+/* ? End Styling the footer */
+
+
+@media (max-width:600px){
+  .countainer{width: 98%;margin: 0 auto};
+}

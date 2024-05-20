@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/index.css">
+    <title>Anime_4U -- Home</title>
+</head>
+<body class="">
+    <!-- Start start header  -->
+    <header >
+        <nav class="flex-between countainer">
+            <h1 class="logo"><a href="#" title="Home">Anime<b class="orangered">_4U</b></a></h1>
+            <ul class="nav-list flex">
+                <li class="nav-item"><a href="#" title="Movies">Movies</a></li>
+                <li class="nav-item"><a href="./Preview.html" title="Tv Shows">Tv Shows</a></li>
+                <li class="nav-item"><a href="./Regester.html" title="Singup">Sing up</a></li>
+            </ul>
+        </nav>
+        <div class="header--inner flex-column">
+            <h1>Welcome</h1>
+            <p class="H-desc text-center">the ultimate destination for Animation movie lowers.Explore Now.</p>
+            <form class="searchField flex-between" id="searchForm">
+                <input type="search" placeholder="Serch for Movie name/Tvshow" name="query" title="search input" id="searchInput">
+                <label for="searchInput">Search</label>
+            </form>
+        </div>
+        <img src="../src/img1.jpg" alt="headerCover" class="headerCover">
+        <div class="header--cover"></div>
+    </header>
+    <!-- End start header  -->
+
+    <!-- Start main section -->
+    <main id="main">
+        <section class="countainer">
+            <!-- Start Trending section -->
+            <div class="section" id="section-1">
+                <div class="section-header flex-between">
+                    <h3 class="sectionTitle orangered">Trending</h3>
+                    <div class="time-zone flex">
+                        <span class="time active">Day</span>
+                        <span class="time">Weeck</span>
+                    </div>
+                </div>
+                <div class="section-carousel">
+                    <div class="carousel--inner flex">
+                        <div class="Card CarouselCard">
+                            <img src="../SRC/img1.jpg" alt="Card Cover" class="Card--cover">
+                            <h4 class="Card--title">How to Train Your Dragon</h4>
+                            <div class="date">23,05,2023</div>
+                            <div class="Card--rate flex-center">9.5</div>
+                        </div>
+                    </div>
+                    <div class="carousel--btns flex-between">
+                        <span id="TrendLeft-btn" class="left s-btn"><</span>
+                        <span id="TrendRight-btn" class="right s-btn">></span>
+                    </div>
+                </div>
+                <!-- End Trending section -->
+            </div>
+            <!-- End Trending section -->
+
+            <!-- Start Most Popular section -->
+            <div class="section" id="section-2">
+                <div class="section-header flex-between">
+                    <h3 class="sectionTitle orangered">Trending</h3>
+                    <div class="time-zone flex">
+                        <span class="time">Day</span>
+                        <span class="time">Weeck</span>
+                    </div>
+                </div>
+                <div class="section-carousel">
+                    <div class="carousel--inner flex">
+                        <div class="Card CarouselCard">
+                            <img src="../SRC/img1.jpg" alt="Card Cover" class="Card--cover">
+                            <h4 class="Card--title">How to Train Your Dragon</h4>
+                            <div class="date">23,05,2023</div>
+                            <div class="Card--rate flex-center">9.5</div>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel--btns flex-between">
+                        <span id="PopLeft-btn" class="left s-btn"><</span>
+                        <span id="PopRight-btn" class="right s-btn">></span>
+                    </div>
+                </div>
+                <!-- End Trending section -->
+            </div>
+            <!-- End Most Popular section -->
+        </section>
+    </main>
+    <!-- End main section -->
+
+    <!-- Start footer -->
+    <footer>
+        <div class="footer--inner">
+            <div class="footer--links flex-around">
+                <a href="#" title="Terms of Us" class="footer-link">Terms of Us</a>
+                <a href="#" title="Privacy Policy" class="footer-link">Privacy Policy</a>
+                <a href="#" title="About" class="footer-link">About</a>
+                <a href="#" title="Blog" class="footer-link">Blog</a>
+                <a href="#" title="FAQ" class="footer-link">FAQ</a>
+            </div>
+            <div class="footer--desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptatem, repellat dignissimos unde, ducimus dicta necessitatibus possimus quia accusamus maiores atque et nobis corporis at nam obcaecati culpa sit odit.
+            </div>
+            <div class="footer--socials flex-evenly">
+                <a href="#" title="Face book" class="footer-social s-btn"></a>
+                <a href="#" title="Email" class="footer-social s-btn"></a>
+                <a href="#" title="Linked_in" class="footer-social s-btn"></a>
+                <a href="#" title="Twitter" class="footer-social s-btn"></a>
+                <a href="#" title="You Tube" class="footer-social s-btn"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="../Scripts/index.js"></script>
+    <script src="../Scripts/app_api.js"></script>
+</body>
+</html>
