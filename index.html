@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="stylesheet" href="./Styles/index.css">
     <title>Anime_4U -- Home</title>
 </head>
 <body class="">
@@ -24,6 +24,11 @@
                 <input type="search" placeholder="Serch for Movie name/Tvshow" name="query" title="search input" id="searchInput">
                 <label for="searchInput">Search</label>
             </form>
+            <div id="filter countainer">
+                <ul class="genres_list flex my-1">
+                    <!-- Genres gos here  -->
+                </ul>
+            </div>
         </div>
         <img src="../src/img1.jpg" alt="headerCover" class="headerCover">
         <div class="header--cover"></div>
@@ -115,7 +120,8 @@
     </footer>
     <!-- End footer -->
 
-    <script src="../Scripts/index.js"></script>
-    <script src="../Scripts/app_api.js"></script>
+    <script src="./Scripts/index.js"></script>
+    <script src="./Scripts/app_api.js"></script>
+    <script src="./Resource/AnimeGenres.js"></script>
 </body>
 </html>
